@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Basic funtions in JAVASCRIPT</h1>
+        <button onclick="execute()">Execute JS Funtion</button>
+        <button onclick="add(6,7)">Calculate</button>
+        <script>
+             function execute(){
+                document.write("hello world")
+             }
+             function add(x,y){
+                var x,y
+                document.write("Addition= "+(x+y))
+             }
+        </script>
+        <hr>
+        <h1>Scope of variables</h1>
+        <p>A function can access variables defined inside the function:
+        </p>
+        <button type="button" onclick="myfunction()">Click Me</button>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            var b = 5;
+            function myfunction(){
+                var a = 4
+                document.getElementById("demo").innerHTML = b * a;
+            }
+            document.getElementById("demo1").innerHTML = a;
+            document.getElementById('demo2').innerHTML = b;
+        </script>
+        <hr>
+        <h1 style="color:green">Codingal eduaction</h1>
+        <h3>Function declaration</h3>
+        <script>
+            var result = function (a,b) {return a * b};
+            document.write(result(5,8));
+        </script>
+    </body>
+</html>
