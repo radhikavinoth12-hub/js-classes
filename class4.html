@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Javascript
+        </title>
+    </head>
+    <body>
+        <h2>Javascript Objects and its Properties</h2>
+
+        <p>There are two different ways to access an object property</p>
+        <p>You can use .property or ["property"]</p>
+        <p id="demo"></p>
+        <script>
+            //Create an object:
+            var person = {
+                firstname: "I",
+                age: 20,
+            }
+            //display some data from the object:
+            document.getElementById("demo").innerHTML = person.firstname + " am " +
+            person.age + " years old ";
+        </script>
+        <hr>
+
+        <h2>Math Objects</h2>
+<script>
+    //document.write(Math.random());
+    //Math.floor:
+    let number = 7.4
+    document.write(Math.floor(number))
+    document.write("<br>")
+    document.write(Math.ceil(number))
+</script>
+<hr>
+    <h2>Argument Objects</h2>
+    <p>Finding the largest number with help of Argument Objects</p>
+    <p id="result"></p>
+    <script>
+        function findmax() {
+            var i;
+            var max = 0;
+            for(i = 0; 1 <arguments.length; i++){
+                  if (arguments[i] > max){
+                    max = arguments[i];
+
+  }
+                
+                
+    }
+ return max;
+    }
+    document.getElementById("result").innerHTML = findmax(4 , 5, 6)
+    </script>
+    </body>
+</html>
