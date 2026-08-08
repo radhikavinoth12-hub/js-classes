@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: blueviolet;
+                text-align: center;
+                color: rgb(255, 0, 0);
+            }
+            h1{
+                border: 2px solid black ;
+                text-align: center;
+                background-color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Palindrome Checking Function</h1>
+        <script>
+            function palindrome(myString) {
+                // in case if any special charchters or spaces are givem in input that has to be removed.
+                var input = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+                //to check palindrome or not the string needs to be reversed so are reversing it by splitting and joining it
+
+                var reversedInput = input.split('').reverse().join('');
+                //checking for palindrome
+                if (input === reversedInput) {
+                    document.write("<div>" + myString + " is a plaindrome <div>");
+                } else {
+                    document.write("<div>" + myString + " is not a palindrome <div>")
+                }
+            }
+            //invoking fucntion
+
+            palindrome("manish")
+        </script>
+    </body>
+</html>
