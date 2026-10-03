@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Digital Clock</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, darkblue, blueviolet, blue, violet);
+            color:crimson;
+             
+        }
+        button{
+            color:blueviolet;
+            font-size: medium;
+        }
+        div{
+            font-size:xx-large;
+            color:rgb(240, 128, 0);
+        }
+    </style>
+</head>
+
+<body >
+    <center>
+    <h1>Digital Clock</h1>
+    <button onclick="showTime()"> Click the Button to Display Time</button>
+    <br>
+    <br>
+    <br>
+
+    <br>   
+    <div id="MyClockDisplay"></div>
+    <script>
+        function showTime() {
+            var date = new Date();
+            var y = date.getFullYear();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var day = days[date.getDay()];
+            
+            d = (d < 10) ? "0" + d : d;
+            m = (m < 10) ? "0" + m : m;
+            var time = d + ":" + m + ":" + y + " " + day;
+            document.getElementById("MyClockDisplay").innerText = time;
+            setTimeout(showTime, 1000);
+        }
+    </script>
+    </center>
+</body>
+
+</html>
