@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <section>
+           
+            <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwwcVJkKy2ryTG8iLoRAfML6iQymVLA5GV4bcWX49VCQ&s=10" style="height:500px;">
+            <img class="mySlides" src="https://static.wikia.nocookie.net/lionking/images/5/50/Kiara-HD.png/revision/latest/scale-to-width-down/1200?cb=20230811142324" style="height:500px;">
+            <img class="mySlides" src="https://static.wikia.nocookie.net/disney/images/7/78/Profile_-_Kion_S3.png/revision/latest?cb=20240804061257" style="height:500px;">
+            <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/en/9/94/Simba_%28_Disney_character_-_adult%29.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" style="height:500px;">
+
+        </section>
+        <script>
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1} 
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel,1000);
+            }
+        </script>
+    </body>
+</html>
